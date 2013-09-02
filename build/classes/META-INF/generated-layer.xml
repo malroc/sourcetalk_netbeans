@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE filesystem PUBLIC "-//NetBeans//DTD Filesystem 1.2//EN"
+                            "http://www.netbeans.org/dtds/filesystem-1_2.dtd">
+<filesystem>
+    <folder name="Actions">
+        <folder name="Build">
+            <file name="org-sourcetalk-plugin-ST_Action.instance">
+                <!--org.sourcetalk.plugin.ST_Action-->
+                <attr
+                    bundlevalue="org.sourcetalk.plugin.Bundle#CTL_ST_Action" name="displayName"/>
+                <attr methodvalue="org.openide.awt.Actions.context" name="instanceCreate"/>
+                <attr name="type" stringvalue="org.openide.cookies.EditorCookie"/>
+                <attr methodvalue="org.openide.awt.Actions.inject" name="delegate"/>
+                <attr name="injectable" stringvalue="org.sourcetalk.plugin.ST_Action"/>
+                <attr name="selectionType" stringvalue="EXACTLY_ONE"/>
+                <attr boolvalue="false" name="noIconInMenu"/>
+            </file>
+        </folder>
+    </folder>
+    <folder name="Menu">
+        <folder name="Tools">
+            <file name="org-sourcetalk-plugin-ST_Action.shadow">
+                <!--org.sourcetalk.plugin.ST_Action-->
+                <attr name="originalFile" stringvalue="Actions/Build/org-sourcetalk-plugin-ST_Action.instance"/>
+                <attr intvalue="1800" name="position"/>
+            </file>
+            <file name="org-sourcetalk-plugin-ST_Action-separatorBefore.instance">
+                <!--org.sourcetalk.plugin.ST_Action-->
+                <attr name="instanceCreate" newvalue="javax.swing.JSeparator"/>
+                <attr intvalue="1750" name="position"/>
+            </file>
+        </folder>
+    </folder>
+</filesystem>

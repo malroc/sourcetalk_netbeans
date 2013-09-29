@@ -21,10 +21,9 @@ import java.net.URL;
 public class Req_Resp {
     
     static public String sendPost(String targetURL, String urlParameters) throws MalformedURLException, IOException, URISyntaxException  {
-        URL url;
-        HttpURLConnection connection = null;  
+        URL url; 
         url = new URL(targetURL);
-        connection = (HttpURLConnection)url.openConnection();
+        HttpURLConnection connection = (HttpURLConnection)url.openConnection();
         connection.setRequestMethod("POST");
         connection.setRequestProperty("Content-Type", 
              "application/x-www-form-urlencoded");

@@ -30,7 +30,7 @@ import org.openide.util.NbBundle.Messages;
 @ActionRegistration(
         displayName = "#CTL_ST_Action")
 @ActionReference(path = "Menu/Tools", position = 1800, separatorBefore = 1750)
-@Messages("CTL_ST_Action=Send to SourceTalk")
+@Messages("CTL_ST_Action=Send to SourceTalk.net")
 public final class ST_Action implements ActionListener {
 
     private final EditorCookie context;
@@ -60,7 +60,7 @@ public final class ST_Action implements ActionListener {
             Exceptions.printStackTrace(ex);
         }
         try {       
-            String open_url = Req_Resp.sendPost("http://sourcetalk.net/conferences",urlParameters);
+            String open_url = Req_Resp.sendPost("http://app.sourcetalk.net/conferences",urlParameters);
             
             open_url += "/" + num;
             Desktop.getDesktop().browse(new URL(open_url).toURI());
@@ -84,7 +84,6 @@ public final class ST_Action implements ActionListener {
                 rowNumber++;
             }
         } catch (BadLocationException e) {
-            e.printStackTrace();
         }
         return rowNumber;
     }

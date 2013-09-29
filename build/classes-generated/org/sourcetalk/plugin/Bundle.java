@@ -3,7 +3,7 @@ package org.sourcetalk.plugin;
 @javax.annotation.Generated(value="org.netbeans.modules.openide.util.NbBundleProcessor")
 class Bundle {
     /**
-     * @return <i>Send to SourceTalk</i>
+     * @return <i>Send to SourceTalk.net</i>
      * @see ST_Action
      */
     static String CTL_ST_Action() {

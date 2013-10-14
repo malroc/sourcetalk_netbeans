@@ -55,14 +55,14 @@ public final class ST_Action implements ActionListener {
             urlParameters = "conference[file_name]="
                 +URLEncoder.encode(name,"UTF-8")+"&"
                 +"conference[source]="
-                +URLEncoder.encode(code,"UTF-8");
+                +URLEncoder.encode(code,"UTF-8")+"&"
+                +"conference[scroll_position]="
+                +num;
         } catch (UnsupportedEncodingException ex) {
             Exceptions.printStackTrace(ex);
         }
         try {       
             String open_url = Req_Resp.sendPost("http://app.sourcetalk.net/conferences",urlParameters);
-            
-            open_url += "/" + num;
             Desktop.getDesktop().browse(new URL(open_url).toURI());
         } catch (MalformedURLException ex) {
             Exceptions.printStackTrace(ex);

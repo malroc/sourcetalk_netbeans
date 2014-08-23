@@ -25,11 +25,12 @@ import org.openide.util.Exceptions;
 import org.openide.util.NbBundle.Messages;
 
 @ActionID(
-        category = "Build",
+        category = "File",
         id = "org.sourcetalk.plugin.ST_Action")
 @ActionRegistration(
+        iconBase = "org/sourcetalk/plugin/st.png",
         displayName = "#CTL_ST_Action")
-@ActionReference(path = "Menu/Tools", position = 1800, separatorBefore = 1750)
+@ActionReference(path = "Toolbars/File", position = 600)
 @Messages("CTL_ST_Action=Send to SourceTalk.net")
 public final class ST_Action implements ActionListener {
 
@@ -52,11 +53,11 @@ public final class ST_Action implements ActionListener {
         
         String  urlParameters = null;
         try {
-            urlParameters = "conference[file_name]="
+            urlParameters = "conference[source_files_attributes][0][name]="
                 +URLEncoder.encode(name,"UTF-8")+"&"
-                +"conference[source]="
+                +"conference[source_files_attributes][0][source]="
                 +URLEncoder.encode(code,"UTF-8")+"&"
-                +"conference[scroll_position]="
+                +"conference[source_files_attributes][0][scroll_position]="
                 +num;
         } catch (UnsupportedEncodingException ex) {
             Exceptions.printStackTrace(ex);
